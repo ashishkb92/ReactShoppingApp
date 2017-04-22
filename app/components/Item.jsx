@@ -2,22 +2,20 @@ var React = require('react');
 
 
 var Item = React.createClass({
+  handleAddtoCart : function(){
+     var {name, price} = this.props;
+     this.props.onAddtoCart(name, price);
+  },
   render : function(){
-    var {img, name} = this.props;
+    var {img, name, price} = this.props;
     return(
-    <div>
-      <tr>
-        <td>
-          <img src = {img} height="20" width="20"></img>
-        </td>
-        <td>
-          {name}
-        </td>
-        <td>
-          Add to cart
-        </td>
-      </tr>
-    </div>
+      <div className="row">
+        <div className="small-2 large-2 columns"><img src = {img} height="50" width="40"></img></div>
+        <div className="small-4 large-4 columns">{name}</div>
+        <div className="small-2 large-2 columns"><b>INR {price}</b></div>
+        <div className="small-4 large-4 columns"><button className = "button expanded" onClick ={this.handleAddtoCart} >add to cart</button></div>
+      </div>
+
   );
   }
 });
