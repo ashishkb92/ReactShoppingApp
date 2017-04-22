@@ -1,5 +1,6 @@
 var React = require('react');
 var uuid = require('node-uuid');
+var {Link} = require('react-router');
 
 var WelcomeText = require('WelcomeText');
 var ItemAPI = require('ItemAPI');
@@ -17,7 +18,7 @@ var Store = React.createClass({
   },
 
   componentDidUpdate : function (prevProps,prevState){
-    if(this.state.totalPrice == prevState.totalPrice){
+    if(this.state.totalPrice == prevState.totalPrice && this.state.searchText == prevState.searchText ){
       ItemAPI.setCartItems(this.state.cartItems);
       var totalPrice = 0 ;
       this.state.cartItems.forEach ((item)=> totalPrice += item.price);
@@ -52,17 +53,26 @@ var Store = React.createClass({
 
   render : function(){
     ItemAPI.setItems();
-    var {items, searchText, totalPrice} = this.state;
+    var {items, searchText, totalPrice, cartItems} = this.state;
     var filteredItems = ItemAPI.filterItems(items,searchText);
+    var noOfItems = cartItems.length;
     return(
     <div>
       <WelcomeText></WelcomeText>
       <SearchItems onChange = {this.handleChange}></SearchItems>
-      <div >cart price: {totalPrice}</div>
+        <div >
+          <Link to ='/cart'>
+            {noOfItems} items : {totalPrice}
+          </Link>
+        </div>
       <div >
         <ItemList items = {filteredItems} onAddtoCart = {this.handleAddtoCart}></ItemList>
       </div>
-      <div >cart price: {totalPrice}</div>
+      <div >
+        <Link to ='/cart'>
+          {noOfItems} items : {totalPrice}
+        </Link>
+      </div>
     </div>
   );
   }
