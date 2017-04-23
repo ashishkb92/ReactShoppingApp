@@ -5,7 +5,7 @@ var ItemAPI = require('ItemAPI')
 var Thank = React.createClass({
   render : function(){
     return(
-    <div>
+    <div style = {{paddingTop : '200px' }}>
       <h2>Thanks for shopping. Have a nice day :) </h2>
     </div>
   );

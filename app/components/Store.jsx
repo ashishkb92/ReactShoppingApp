@@ -152,7 +152,7 @@ var Store = React.createClass({
 
 
 
-  render : function(){    
+  render : function(){
     var {items, searchText, totalPrice, cartItems, numberOfItems ,page } = this.state;
     var filteredItems = ItemAPI.filterItems(items,searchText);
     if (page === 'store'){
@@ -160,14 +160,13 @@ var Store = React.createClass({
       <div>
         <WelcomeText></WelcomeText>
         <SearchItems onChange = {this.handleChange}></SearchItems>
-          <div >
-            <p onClick ={this.handleGotoCart}>{numberOfItems} items : INR {totalPrice}</p>
-          </div>
-        <div >
+          <div style = {{textAlign : 'right'}} >
+            <button className = "hollow button " onClick ={this.handleGotoCart}><span><img src= "images/cart.png" height="20" width="20" ></img> {numberOfItems} items : INR {totalPrice}</span></button>
+          </div>        <div >
           <ItemList items = {filteredItems} onAddtoCart = {this.handleAddtoCart}></ItemList>
         </div>
-        <div >
-          <p onClick ={this.handleGotoCart}>{numberOfItems} items : INR {totalPrice}</p>
+        <div style = {{textAlign : 'right'}} >
+          <button className = "hollow button " onClick ={this.handleGotoCart}><span><img src= "images/cart.png" height="20" width="20" ></img> {numberOfItems} items : INR {totalPrice}</span></button>
         </div>
       </div>
     );
@@ -175,7 +174,7 @@ var Store = React.createClass({
     return(
       <div>
         <CartPageText></CartPageText>
-        <div>
+        <div >
           <CartItemList numberOfItems={numberOfItems} totalPrice = {totalPrice} cartItems  = {cartItems} onUpdateCart = {this.handleUpdateCartItem} onDeleteWholeItem = {this.handleDeleteWholeItem} onGotoStore = {this.handleGotoStore}></CartItemList>
         </div>
       </div>

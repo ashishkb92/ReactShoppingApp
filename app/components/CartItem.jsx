@@ -27,7 +27,7 @@ var CartItem = React.createClass({
         <div className="small-2 large-2 columns">{name}</div>
         <div className="small-4 large-4 columns"> <input type="number" ref="quantity" value = {quantity} onChange = {this.handleUpdateCartItem}/></div>
         <div className="small-2 large-2 columns"><b>INR {price}</b></div>
-        <div className="small-4 large-4 columns"><button className = "button expanded" onClick ={this.handleDeleteWholeItem} >Remove</button></div>
+        <div className="small-4 large-4 columns"><button className = "button expanded alert" onClick ={this.handleDeleteWholeItem} >Remove</button></div>
       </div>
 
   );

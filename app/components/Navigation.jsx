@@ -4,17 +4,17 @@ var {Link, IndexLink} = require('react-router');
 var Navigation = React.createClass({
   render : function(){
     return(
-    <div className = "top-bar">
-      <div className = "top-bar-left">
-        <ul className = "menu">
-          <li className = "menu-text">
+    <div className = "top-bar" style = {{backgroundColor : '#333333' }}>
+      <div className = "top-bar-left" >
+        <ul className = "menu" style = {{backgroundColor : '#333333'}} >
+          <li className = "menu-text" style = {{color : 'white' }} >
             React Store
           </li>
         </ul>
       </div>
       <div className="top-bar-right">
-        <ul className="menu">
-          <li className="menu-text">
+        <ul className="menu" style = {{backgroundColor : '#333333'}}>
+          <li className="menu-text" style = {{color : 'white' }} >
             Created by Ashish Kumar
           </li>
         </ul>

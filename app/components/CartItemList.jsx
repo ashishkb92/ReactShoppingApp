@@ -28,21 +28,21 @@ var CartItemList = React.createClass({
       return(
        <div className="row">
          <div className="small-8 large-8 columns">
-           <div className="row">
-             <div className="small-2 large-2 columns">Item</div>
-             <div className="small-4 large-4 columns"> Quantity</div>
-             <div className="small-2 large-2 columns">Price</div>
+           <div className="row" style = {{paddingTop : '20px',paddingBottom : '30px' }}>
+             <div className="small-2 large-2 columns"><b>Item</b></div>
+             <div className="small-4 large-4 columns"><b>Quantity</b> </div>
+             <div className="small-2 large-2 columns"><b>Price</b></div>
              <div className="small-4 large-4 columns"></div>
            </div>
            {renderList()}
-           <div className="row">
-             <div className="small-2 large-2 columns">Total</div>
-             <div className="small-4 large-4 columns"> {numberOfItems}</div>
-             <div className="small-2 large-2 columns">{totalPrice}</div>
+           <div className="row" style = {{paddingTop : '20px',paddingBottom : '30px' }} >
+             <div className="small-2 large-2 columns"><b>Total</b></div>
+             <div className="small-4 large-4 columns"> <b>{numberOfItems}</b></div>
+             <div className="small-2 large-2 columns"><b>{totalPrice}</b></div>
              <div className="small-4 large-4 columns"></div>
            </div>
            </div>
-           <div className="small-4 large-4 columns">
+           <div className="small-4 large-4 columns" style = {{paddingLeft : '40px' }} >
              <div>
                <button className = "button expanded" onClick ={this.handleGotoStore} >Go to Store</button>
              </div>
@@ -60,25 +60,25 @@ var CartItemList = React.createClass({
      return(
       <div className="row">
         <div className="small-8 large-8 columns">
-          <div className="row">
-            <div className="small-2 large-2 columns">Item</div>
-            <div className="small-4 large-4 columns"> Quantity</div>
-            <div className="small-2 large-2 columns">Price</div>
+          <div className="row" style = {{paddingTop : '20px',paddingBottom : '30px' }} >
+            <div className="small-2 large-2 columns"><b>Item</b></div>
+            <div className="small-4 large-4 columns"><b>Quantity</b> </div>
+            <div className="small-2 large-2 columns"><b>Price</b></div>
             <div className="small-4 large-4 columns"></div>
           </div>
           {renderList()}
-          <div className="row">
-            <div className="small-2 large-2 columns">Total</div>
-            <div className="small-4 large-4 columns"> {numberOfItems}</div>
-            <div className="small-2 large-2 columns">{totalPrice}</div>
+          <div className="row" style = {{paddingTop : '100px',paddingBottom : '30px' }} >
+            <div className="small-2 large-2 columns"><b>Total</b></div>
+            <div className="small-4 large-4 columns"> <b>{numberOfItems}</b></div>
+            <div className="small-2 large-2 columns"><b>{totalPrice}</b></div>
             <div className="small-4 large-4 columns"></div>
           </div>
           </div>
-          <div className="small-4 large-4 columns">
+          <div className="small-4 large-4 columns" style = {{paddingLeft : '40px' }}>
             <div>
               <button className = "button expanded" onClick ={this.handleGotoStore} >Go to Store</button>
             </div>
-            
+
 
         </div>
 
