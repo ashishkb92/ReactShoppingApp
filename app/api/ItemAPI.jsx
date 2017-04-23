@@ -62,7 +62,15 @@ getTotalPrice : function() {
   }else {
     return totalPrice;
   }
+},
 
+getnumberOfItems : function() {
+  var numberOfItems = parseInt(localStorage.getItem('numberOfItems'));
+  if (isNaN(numberOfItems)){
+    return 0 ;
+  }else {
+    return numberOfItems;
+  }
 },
 
 setCartItems : function(cartItems) {
@@ -75,6 +83,11 @@ setCartItems : function(cartItems) {
 setTotalPrice : function(totalPrice) {
    var stringTotalPrice = totalPrice.toString();
    localStorage.setItem('totalPrice',stringTotalPrice);
+},
+
+setnumberOfItems : function(numberOfItems) {
+   var stringnumberOfItems = numberOfItems.toString();
+   localStorage.setItem('totalPrice',stringnumberOfItems);
 },
 
 filterItems : function(items,searchText){

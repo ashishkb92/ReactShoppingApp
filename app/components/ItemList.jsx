@@ -4,8 +4,8 @@ var Item = require('Item')
 
 var ItemList = React.createClass({
 
-  handleAddtoCart: function(name ,price){
-    this.props.onAddtoCart(name,price);
+  handleAddtoCart: function(id, name ,price){
+    this.props.onAddtoCart(id, name, price);
   },
 
   render : function(){
