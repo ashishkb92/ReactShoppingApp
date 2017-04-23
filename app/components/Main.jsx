@@ -1,9 +1,11 @@
 var React = require('react');
 
 var Navigation = require('Navigation');
+var ItemAPI = require('ItemAPI')
 
 var Main = React.createClass({
   render : function(){
+    ItemAPI.setItems();
     return(
       <div>
         <Navigation></Navigation>

@@ -12,6 +12,7 @@ var Thank = React.createClass({
 },
 
   componentDidMount :function(){
+    ItemAPI.removeItems();
     ItemAPI.removeCartItems();
     ItemAPI.removeTotalPrice();
     ItemAPI.removenumberOfItems();

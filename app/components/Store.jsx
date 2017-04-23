@@ -149,12 +149,10 @@ var Store = React.createClass({
     });
   },
 
-  componenWillMount: function(){
-    ItemAPI.setItems();
-  },
 
-  render : function(){
 
+
+  render : function(){    
     var {items, searchText, totalPrice, cartItems, numberOfItems ,page } = this.state;
     var filteredItems = ItemAPI.filterItems(items,searchText);
     if (page === 'store'){
