@@ -87,8 +87,28 @@ setTotalPrice : function(totalPrice) {
 
 setnumberOfItems : function(numberOfItems) {
    var stringnumberOfItems = numberOfItems.toString();
-   localStorage.setItem('totalPrice',stringnumberOfItems);
+   localStorage.setItem('numberOfItems',stringnumberOfItems);
 },
+
+removeItems : function() {
+
+  localStorage.removeItem('items');
+
+},
+
+
+removeCartItems : function() {
+    localStorage.removeItem('cartItems')
+},
+
+removeTotalPrice : function() {
+     localStorage.removeItem('totalPrice')
+},
+
+removenumberOfItems : function() {
+     localStorage.removeItem('numberOfItems')
+},
+
 
 filterItems : function(items,searchText){
   var filteredItems = items;

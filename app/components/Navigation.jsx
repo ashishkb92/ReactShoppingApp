@@ -10,16 +10,6 @@ var Navigation = React.createClass({
           <li className = "menu-text">
             React Store
           </li>
-          <li>
-            <IndexLink to = '/' activeClassName="active-link">
-              Store
-            </IndexLink>
-          </li>
-          <li>
-            <Link to = '/cart' activeClassName="active-link">
-              Cart
-            </Link>
-          </li>
         </ul>
       </div>
       <div className="top-bar-right">
