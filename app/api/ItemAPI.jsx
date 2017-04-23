@@ -29,7 +29,7 @@ module .exports = {
   },
   {
     id : uuid(),
-    img : 'pineapple.jpg',
+    img : 'images/pineapple.jpg',
     name : 'Pineapple',
     price : 60
   }
