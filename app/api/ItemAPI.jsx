@@ -5,31 +5,31 @@ module .exports = {
   items : [
   {
     id : uuid(),
-    img : 'images/apple.png',
+    img : 'apple.png',
     name : 'Apple',
     price : 40
   },
   {
     id : uuid(),
-    img : 'images/grape.png',
+    img : 'grape.png',
     name : 'Grape',
     price : 20
   },
   {
     id : uuid(),
-    img : 'images/grapefruit.jpg',
+    img : 'grapefruit.jpg',
     name : 'Grapefruit',
     price : 30
   },
   {
     id : uuid(),
-    img : 'images/banana.jpg',
+    img : 'banana.jpg',
     name : 'Banana',
     price : 50
   },
   {
     id : uuid(),
-    img : 'images/pineapple.jpg',
+    img : 'pineapple.jpg',
     name : 'Pineapple',
     price : 60
   }
